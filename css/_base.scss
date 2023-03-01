@@ -1,0 +1,32 @@
+$font-color-darker_white: #EFEFEF;
+$font-color-green: #66C05D;
+$font-color-grey: #333;
+$font-color-black: #000;
+$font-color-white: #fff;
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 360px;
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  &:visited{
+    text-decoration: none;
+  }
+}
+
+@mixin center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

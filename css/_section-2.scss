@@ -1,0 +1,163 @@
+@use "base";
+
+.section-2 {
+  background: base.$font-color-darker_white;
+  overflow: hidden;
+}
+
+.section-2_wrap {
+  color: base.$font-color-black;
+  width: 60%;
+  margin: 25px auto;
+
+}
+
+.list_wrapper {
+  margin-bottom:100px;
+
+
+  .item_list {
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    padding: 0;
+
+    .container {
+      margin: 0 auto;
+    }
+
+    .item_list_item {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      text-align: -webkit-center;
+      background: base.$font-color-white;
+
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .description {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .price {
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+
+    .item_btn_container {
+      .item-btn {
+        background: base.$font-color-green;
+        padding: 0.5em 3em;
+        border: none;
+        color: base.$font-color-white;
+        border-radius: 30px;
+        margin: 20px auto 25px auto;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+
+.bonus-and-map-container {
+  width: 100%;
+  display: flex;
+}
+
+
+.bonus-container, .map-container {
+  width: 100%;
+  padding: 1em;
+  height: 10em;
+  color: base.$font-color-white;
+  background: base.$font-color-green;
+
+  ._text {
+    margin-bottom: 25px;
+  }
+
+  .bonus-headline, .map_headline {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .bonus_description, .map_description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.bonus-container {
+  display: flex;
+  align-items: center;
+  margin-right: 30px !important;
+
+  .img-container {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .bonus-content {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+.bonus-input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  background: base.$font-color-white;
+  border: none;
+  border-radius: 40px;
+  padding: 0.5em 5em 0.5em 1em;
+}
+
+.map_input {
+  color: base.$font-color-white;
+  background: transparent;
+  border: 2px solid base.$font-color-white;
+  border-radius: 40px;
+  padding: 0.5em 1em;
+}
+
+
+@media (max-width: 1260px) {
+  .img-container {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1026px) {
+  .bonus-and-map-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .section-2_wrap {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+
+
+
+

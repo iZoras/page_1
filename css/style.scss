@@ -1,0 +1,166 @@
+@use "base";
+@use "section_1";
+@use "section-2";
+@use "footer";
+
+.header {
+
+}
+
+.header_container {
+
+}
+
+.top-nav_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgba(37, 37, 37, 0.1);
+}
+
+.top-nav_list {
+  display: flex;
+  align-items: center;
+
+  .top-nav_item {
+    font-size: 0.9em;
+    margin-right: 40px;
+
+    .top-nav_anchor {
+      color: base.$font-color-grey;
+    }
+  }
+}
+
+
+//Logo part
+
+.logo_container {
+  border-bottom: 1px solid base.$font-color-darker_white;
+}
+
+.logo_wrap {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+  .logo_name {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+    margin-left: 15px;
+    text-transform: uppercase;
+    color: base.$font-color-green;
+  }
+}
+
+.call_container {
+  position: relative;
+
+  .call_btn {
+    background: transparent;
+    border: 2px solid base.$font-color-green;
+    border-radius: 40px;
+    padding: 0.5em 1em;
+    margin-left: 2em;
+    color: base.$font-color-black;
+  }
+}
+
+.main-nav_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav_container {
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav_list {
+  display: flex;
+  align-items: center;
+
+  .main-nav_list-item {
+    a{color: base.$font-color-grey;}
+    margin-right: 2em;
+  }
+}
+
+.main-nav_container_enable {
+  display: none;
+}
+
+
+@media (max-width: 650px) {
+
+  .logo{
+    transform: scale(0.8);
+  }
+
+  .call_container{
+    transform: scale(0.8);
+    margin-bottom: 15px;
+  }
+
+  .top-nav_list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo_wrap {
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .main-nav_list {
+    display: none;
+  }
+
+  .main-nav_container_enable {
+    display: block;
+    margin-top: 15px;
+    overflow: hidden;
+
+    .main_nav_burger {
+      display: none;
+      flex-direction: column;
+      transform: translateY(-100%);
+
+    }
+
+    #btnControl {
+      display: none;
+    }
+
+    #btnControl:checked + .main_nav_burger {
+      display: flex;
+      flex-direction: column;
+      transform: translateY(0%);
+      transition: transform 0.3s ease-in-out;
+      text-align: -webkit-center;
+      a{
+        color: base.$font-color-grey;
+      }
+    }
+  }
+
+  .nav_btn {
+    position: absolute;
+    right: 25px;
+    font-size: 2em;
+  }
+}
+
